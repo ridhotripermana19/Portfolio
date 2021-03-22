@@ -1,3 +1,18 @@
+/*
+    Menset html document dengan posisi relative (meposikan relatif ke normal posisinya)
+*/
+html {
+    position: relative;
+}
+
+
+/* 
+    Menset margin bottom 120 pixels, dan mgin top 30 pixels ke body.
+*/
+body {
+    margin-bottom: 120px;
+}
+
 /* 
     Menset element img yang ada didalam class jumbotron
     agar memiliki lebar sebesar 200 pixels, dan border
