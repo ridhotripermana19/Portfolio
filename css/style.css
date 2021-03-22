@@ -1,0 +1,35 @@
+/* 
+    Menset element img yang ada didalam class jumbotron
+    agar memiliki lebar sebesar 200 pixels, dan border
+    sebesar 5 pixels solid dengan warna abu-abu.
+*/
+.jumbotron img {
+    width: 200px;
+    border: 5px solid #666;
+}
+
+/* 
+    Menset element hr agar memiliki lebar sebesar 250 pixels, menetapkan top border
+    dengan lebar 3px solid berwarna abu-abu, lalu isi kontentagar berada ditengah,
+     dengan margin ditetapkan otomatis oleh browser.
+*/
+hr {
+    width: 250px;
+    border-top: 3px solid #999;
+    justify-content: center;
+    margin: auto;
+}
+
+/* 
+    Menset element section untuk memiliki tinggi minimal 600 pixels.
+*/
+section {
+    min-height: 600px;
+}
+
+/* 
+    Menset warna background dari class portofolio dengan warna putih
+*/
+.portfolio {
+    background-color: #eee;
+}
