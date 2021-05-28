@@ -108,6 +108,11 @@ self.addEventListener("fetch", (evt) => {
           })
         );
       })
+      // Jika terdapat error maka tangkap error tersebut menggunakan
+      // method catch. jika error dikarenakan request url dikarenakan
+      // mengakses laman html yang tidak ada maka kembalikan cache yang
+      // key nya cocok dengan /layout/404.html yaitu laman 404.html sendiri
+      // yang mengatakan bahwa laman dari request url yang diberikan tidak ada.
       .catch(() => {
         if (evt.request.url.indexOf(".html") > -1) {
           return caches.match("/layout/404.html");
