@@ -1,30 +1,40 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <!-- Required meta tags -->
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <!-- 
         Memberikan instruksi ke browser untuk mengontrol dimesi dari halaman dan skalanya 
         width=device-width digunakan untuk mensets lebar dari halaman untuk mengikuti lebar screen dari device
         initial-scale=1.0 digunakan untuk set initial zoom ketika halaman di muat pertama kali oleh browser.
     -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- 
         Menghubungkan eksternal resource dari bootstrap ke dokumen ini.
      -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
-        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
     <!--
         Menghubungkan file css dengan nama style.css yang terdapat pada folder css
     -->
-    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <!-- Menambahkan web manifest untuk support pwa -->
+    <link rel="manifest" href="manifest.json" />
+    <!-- ios support -->
+    <link rel="apple-touch-icon" href="/images/profile.png" />
+    <meta name="apple-mobile-web-app-status-bar" content="#FFE1C4" />
+    <meta name="theme-color" content="#FFE1C4" />
+
     <title>My Portfolio</title>
-</head>
+  </head>
 
-<body>
-
+  <body>
     <!-- Navigasi -->
     <!-- 
         Membuat navigasi bar
@@ -33,40 +43,49 @@
         navbar-expand-lg digunakan untuk memanjangkan navigasi bar jika screen size = dekstop,
         navbar-dark bg-dark digunakan untuk memberi warna background hitam pada navigasi bar
      -->
-     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <!--
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <!--
             Membuat anchor element dengan class navbar-brand
         -->
-        <a class="navbar-brand" href="#">Triwibowo Ridho</a>
-        <!--
+      <a class="navbar-brand" href="#">Triwibowo Ridho</a>
+      <!--
             Membuat button yang jika diklik menu dari navigation akan collapse
 
             Class navbar-toggler digunakan untuk menggunakan collapse plugin dan navigation toggling yang disediakan oleh bootstrap
             data-toggle digunakan untuk menghide atau menshow content ketika button di toggle dengan target content yang akan dihide
             berada pada element dengan id navbarSupportedContent.
         -->
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+      <button
+        class="navbar-toggler"
+        type="button"
+        data-toggle="collapse"
+        data-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-        <!--
+      <!--
             Membuat navbar item
         -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <!--
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <!--
                 Class navbar-nav class digunakan untuk menerapkan style yang full-height dan lightweight navgation,
                 kemudian mr-auto digunakan untuk menset margin secara otomatis.
             -->
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/layout/contact.html">Contact Me</a>
-                </li>
-            </ul>
-        </div>
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"
+              >Home <span class="sr-only">(current)</span></a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/layout/contact.html">Contact Me</a>
+          </li>
+        </ul>
+      </div>
     </nav>
     <!-- Akhir navigasi -->
 
@@ -78,212 +97,221 @@
         yang terdapat didalam element ini.
     -->
     <div class="jumbotron text-center">
-        <!--
+      <!--
             Class rounder-circle didalam element ini digunakan untuk membuat gambar
             berbentuk round atau berbentuk bulat.
         -->
-        <img src="images/profile.jpg" alt="My Profile" class="rounded-circle">
-        <h1>Triwibowo Ridho Permana</h1>
-        <p>Student | Mobile Developer</p>
+      <img src="images/profile.jpg" alt="My Profile" class="rounded-circle" />
+      <h1>Triwibowo Ridho Permana</h1>
+      <p>Student | Mobile Developer</p>
     </div>
     <!-- Akhir Jumbotron -->
 
     <!-- About -->
     <section class="about" id="about">
-        <!--
+      <!--
             Class container berfungsi untuk membungkus kontent web. container juga 
             merupakan syarat untuk menggunakan default grid system yang disediakan oleh bootstrap.
         -->
-        <div class="container">
-            <!--
+      <div class="container">
+        <!--
                 Membuat baris, sehingga item-item yang terdapat didalam elemen ini akan tampil
                 dalam bentuk baris.
             -->
-            <div class="row">
-                <!--
+        <div class="row">
+          <!--
                     Membuat kolom, dimana sm-12 digunakan untuk mengatur grid pada monitor yang
                     berukuran tablet agar menggunakan sebanyak 12 grid (full).
                 -->
-                <div class="col-sm-12">
-                    <!--
+          <div class="col-sm-12">
+            <!--
                         Class text-center digunakan untuk menampilkan teks agar berada di tengah
                     -->
-                    <h2 class="text-center">About</h2>
-                    <hr>
-                </div>
-            </div>
+            <h2 class="text-center">About</h2>
+            <hr />
+          </div>
+        </div>
 
-            <!--
+        <!--
                 Membuat baris, sehingga item-item yang terdapat didalam elemen ini akan tampil
                 dalam bentuk baris dengan padding untuk y axis diberikan 3.
             -->
-            <div class="row py-3">
-                <!--
+        <div class="row py-3">
+          <!--
                     Membuat kolom, dimana sm-6 digunakan untuk mengatur grid pada monitor yang
                     berukuran tablet agar menggunakan sebanyak 6 grid (half).
                 -->
-                <div class="col-sm-6">
-                    <!--
+          <div class="col-sm-6">
+            <!--
                         Membuat text paragraph agar rata kiri kanan.
                     -->
-                    <p class="text-justify">
-                        Mollit consequat nostrud laboris dolor ullamco Lorem cillum laborum exercitation excepteur nisi
-                        proident ea tempor. Nisi esse ipsum in exercitation nostrud laborum ex dolor fugiat. Fugiat
-                        exercitation incididunt minim eu consequat est sunt. Quis nostrud proident ullamco laboris
-                        exercitation consectetur.
-                    </p>
-                    <!--
+            <p class="text-justify">
+              Mollit consequat nostrud laboris dolor ullamco Lorem cillum
+              laborum exercitation excepteur nisi proident ea tempor. Nisi esse
+              ipsum in exercitation nostrud laborum ex dolor fugiat. Fugiat
+              exercitation incididunt minim eu consequat est sunt. Quis nostrud
+              proident ullamco laboris exercitation consectetur.
+            </p>
+            <!--
                         Membuat text paragraph agar rata kiri kanan.
                     -->
-                    <p class="text-justify">
-                        In in reprehenderit anim ad nisi dolor id. Voluptate nulla Lorem non occaecat voluptate velit
-                        proident deserunt voluptate ipsum sunt exercitation est. Sint ullamco enim deserunt cillum nisi
-                        occaecat officia reprehenderit est pariatur incididunt ad duis. Officia laboris ullamco
-                        excepteur cillum irure elit aliquip minim ut.
-                    </p>
-                    <!--
+            <p class="text-justify">
+              In in reprehenderit anim ad nisi dolor id. Voluptate nulla Lorem
+              non occaecat voluptate velit proident deserunt voluptate ipsum
+              sunt exercitation est. Sint ullamco enim deserunt cillum nisi
+              occaecat officia reprehenderit est pariatur incididunt ad duis.
+              Officia laboris ullamco excepteur cillum irure elit aliquip minim
+              ut.
+            </p>
+            <!--
                         Membuat text paragraph agar rata kiri kanan.
                     -->
-                    <p class="text-justify">
-                        Voluptate exercitation Lorem occaecat proident incididunt anim eiusmod officia non excepteur.
-                        Dolor tempor commodo quis ad duis consectetur. Non eiusmod exercitation qui in aliquip Lorem ad
-                        consequat minim sit nostrud excepteur duis.
-                    </p>
-                </div>
-                <!--
+            <p class="text-justify">
+              Voluptate exercitation Lorem occaecat proident incididunt anim
+              eiusmod officia non excepteur. Dolor tempor commodo quis ad duis
+              consectetur. Non eiusmod exercitation qui in aliquip Lorem ad
+              consequat minim sit nostrud excepteur duis.
+            </p>
+          </div>
+          <!--
                     Membuat kolom, dimana sm-6 digunakan untuk mengatur grid pada monitor yang
                     berukuran tablet agar menggunakan sebanyak 6 grid (half).
                 -->
-                <div class="col-sm-6">
-                    <!--
+          <div class="col-sm-6">
+            <!--
                         Membuat text paragraph agar rata kiri kanan.
                     -->
-                    <p class="text-justify">
-                        Ullamco elit sunt magna esse non commodo veniam adipisicing adipisicing deserunt do aliqua ipsum
-                        ut.
-                        Occaecat veniam qui mollit dolore nulla laboris nostrud reprehenderit cupidatat. Consequat aute
-                        quis
-                        minim qui quis tempor et velit nisi. Et ea incididunt ipsum commodo ex id cupidatat.
-                        Exercitation
-                        cupidatat ad incididunt veniam proident nulla.
-                    </p>
-                    <!--
+            <p class="text-justify">
+              Ullamco elit sunt magna esse non commodo veniam adipisicing
+              adipisicing deserunt do aliqua ipsum ut. Occaecat veniam qui
+              mollit dolore nulla laboris nostrud reprehenderit cupidatat.
+              Consequat aute quis minim qui quis tempor et velit nisi. Et ea
+              incididunt ipsum commodo ex id cupidatat. Exercitation cupidatat
+              ad incididunt veniam proident nulla.
+            </p>
+            <!--
                         Membuat text paragraph agar rata kiri kanan.
                     -->
-                    <p class="text-justify">
-                        Laborum consectetur quis officia magna eiusmod deserunt quis. Mollit nisi esse laboris minim
-                        qui. Magna ea mollit laborum in nisi minim excepteur. Pariatur nisi eiusmod anim elit. Ad eu et
-                        cupidatat excepteur enim cupidatat proident Lorem et magna.
-                    </p>
-                    <!--
+            <p class="text-justify">
+              Laborum consectetur quis officia magna eiusmod deserunt quis.
+              Mollit nisi esse laboris minim qui. Magna ea mollit laborum in
+              nisi minim excepteur. Pariatur nisi eiusmod anim elit. Ad eu et
+              cupidatat excepteur enim cupidatat proident Lorem et magna.
+            </p>
+            <!--
                         Membuat text paragraph agar rata kiri kanan.
                     -->
-                    <p class="text-justify">
-                        Cupidatat eiusmod irure adipisicing consequat eu non qui esse laborum adipisicing non elit
-                        reprehenderit. Laboris non adipisicing esse anim consectetur ad minim est aute ullamco nostrud
-                        commodo laboris velit. Sint labore do anim adipisicing culpa proident eu occaecat tempor
-                        laborum.
-                    </p>
-                </div>
-            </div>
+            <p class="text-justify">
+              Cupidatat eiusmod irure adipisicing consequat eu non qui esse
+              laborum adipisicing non elit reprehenderit. Laboris non
+              adipisicing esse anim consectetur ad minim est aute ullamco
+              nostrud commodo laboris velit. Sint labore do anim adipisicing
+              culpa proident eu occaecat tempor laborum.
+            </p>
+          </div>
         </div>
+      </div>
     </section>
     <!-- Akhir About -->
 
     <!-- Portfolio -->
     <section class="portfolio" id="portfolio">
-        <!--
+      <!--
             Class container berfungsi untuk membungkus kontent web. container juga 
             merupakan syarat untuk menggunakan default grid system yang disediakan oleh bootstrap.
         -->
-        <div class="container py-5">
-            <!--
+      <div class="container py-5">
+        <!--
                 Membuat baris, sehingga item-item yang terdapat didalam elemen ini akan tampil
                 dalam bentuk baris.
             -->
-            <div class="row">
-                <!--
+        <div class="row">
+          <!--
                     Membuat kolom, dimana sm-12 digunakan untuk mengatur grid pada monitor yang
                     berukuran tablet agar menggunakan sebanyak 12 grid (full).
                 -->
-                <div class="col-sm-12">
-                    <!--
+          <div class="col-sm-12">
+            <!--
                         Class text-center digunakan untuk menampilkan teks agar berada di tengah
                     -->
-                    <h2 class="text-center">Portfolio</h2>
-                    <hr>
-                </div>
-            </div>
-            <!--
+            <h2 class="text-center">Portfolio</h2>
+            <hr />
+          </div>
+        </div>
+        <!--
                 Membuat baris dengan padding y axis yang diberikan adalah 3.
             -->
-            <div class="row py-3">
-                <!--
+        <div class="row py-3">
+          <!--
                     Membuat kolom, dimana sm-4 digunakan untuk mengatur grid pada monitor yang
                     berukuran tablet agar menggunakan sebanyak 6 grid (half), lalu menset margin
                     bottom dengan nilai 3.
                 -->
-                <div class="col-sm-4 mb-3">
-                    <!--
+          <div class="col-sm-4 mb-3">
+            <!--
                         Menampilkan image dari resource dengan nama 1.png yang terdapat pada folder images/
                         class img-thumbnail digunakan untuk membuat gambar thumbnail (berupa gambar yang memiliki
                         bingkai putih dipinggirnya yang disediakan oleh bootstrap)
                     -->
-                    <img src="/images/1.png" class="img-thumbnail">
-                </div>
-                <!--
+            <img src="/images/1.png" class="img-thumbnail" />
+          </div>
+          <!--
                     Membuat kolom, dimana sm-4 digunakan untuk mengatur grid pada monitor yang
                     berukuran tablet agar menggunakan sebanyak 6 grid (half), lalu menset margin
                     bottom dengan nilai 3.
                 -->
-                <div class="col-sm-4 mb-3">
-                    <img src="/images/2.png" class="img-thumbnail">
-                </div>
-                <!--
+          <div class="col-sm-4 mb-3">
+            <img src="/images/2.png" class="img-thumbnail" />
+          </div>
+          <!--
                     Membuat kolom, dimana sm-4 digunakan untuk mengatur grid pada monitor yang
                     berukuran tablet agar menggunakan sebanyak 6 grid (half), lalu menset margin
                     bottom dengan nilai 3.
                 -->
-                <div class="col-sm-4 mb-3">
-                    <img src="/images/3.png" class="img-thumbnail">
-                </div>
-                <!--
+          <div class="col-sm-4 mb-3">
+            <img src="/images/3.png" class="img-thumbnail" />
+          </div>
+          <!--
                     Membuat kolom, dimana sm-4 digunakan untuk mengatur grid pada monitor yang
                     berukuran tablet agar menggunakan sebanyak 6 grid (half), lalu menset margin
                     bottom dengan nilai 3.
                 -->
-                <div class="col-sm-4 mb-3">
-                    <img src="/images/4.png" class="img-thumbnail">
-                </div>
-                <!--
+          <div class="col-sm-4 mb-3">
+            <img src="/images/4.png" class="img-thumbnail" />
+          </div>
+          <!--
                     Membuat kolom, dimana sm-4 digunakan untuk mengatur grid pada monitor yang
                     berukuran tablet agar menggunakan sebanyak 6 grid (half), lalu menset margin
                     bottom dengan nilai 3.
                 -->
-                <div class="col-sm-4 mb-3">
-                    <img src="/images/5.jpg" class="img-thumbnail">
-                </div>
-                <!--
+          <div class="col-sm-4 mb-3">
+            <img src="/images/5.jpg" class="img-thumbnail" />
+          </div>
+          <!--
                     Membuat kolom, dimana sm-4 digunakan untuk mengatur grid pada monitor yang
                     berukuran tablet agar menggunakan sebanyak 6 grid (half), lalu menset margin
                     bottom dengan nilai 3.
                 -->
-                <div class="col-sm-4 mb-3">
-                    <img src="/images/6.png" class="img-thumbnail">
-                </div>
-            </div>
+          <div class="col-sm-4 mb-3">
+            <img src="/images/6.png" class="img-thumbnail" />
+          </div>
         </div>
+      </div>
     </section>
     <!-- Akhir Portfolio -->
 
     <!-- jQuery and Bootstrap Bundle (includes Popper) -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
-        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
-        crossorigin="anonymous"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
 
-</body>
-
+    <script src="/js/app.js"></script>
+  </body>
 </html>
