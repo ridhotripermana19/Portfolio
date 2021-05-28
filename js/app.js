@@ -1,3 +1,5 @@
+// Check jika browser support service worker
+// jika support maka register service worker tersebut.
 if ("serviceWorker" in navigator) {
   navigator.serviceWorker
     .register("/sw.js")
