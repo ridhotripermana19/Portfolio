@@ -1,3 +1,4 @@
+// Register Service Worker
 // Check jika browser support service worker
 // jika support maka register service worker tersebut.
 if ("serviceWorker" in navigator) {
