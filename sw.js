@@ -1,8 +1,9 @@
-// Nama dari cache untuk file static.
-const staticCacheName = "site-static-v3";
 
 // Nama dari cache untuk file dynamic.
 const dynamicCacheName = "site-dynamic-v3";
+
+// Nama dari cache untuk file static.
+const staticCacheName = "site-static-v3";
 
 // List static asset yang akan di cache.
 const assets = [
